@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">File Scope</string>
+    <string name="title_activity_compose_example">ComposeExample</string>
+</resources>
