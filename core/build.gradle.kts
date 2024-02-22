@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -59,7 +59,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.lumyuan"
             artifactId = "file-scope"
-            version = "0.0.1"
+            version = "0.0.2"
 
             afterEvaluate {
                 from(components["release"])
