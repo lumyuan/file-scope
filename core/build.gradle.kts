@@ -72,7 +72,7 @@ afterEvaluate {
     publishing {
         publications {
             group = "com.github.lumyuan"
-            version = "0.0.1"
+            version = "0.0.4"
             register<MavenPublication>("release") {
                 // Applies the component for the release build variant.
                 from(components.getByName("release"))
