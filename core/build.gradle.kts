@@ -54,15 +54,31 @@ dependencies {
     implementation(libs.androidx.document.file)
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.lumyuan"
-            artifactId = "file-scope"
-            version = "0.0.3"
+//publishing {
+//    publications {
+//        register<MavenPublication>("release") {
+//            groupId = "com.github.lumyuan"
+//            artifactId = "file-scope"
+//            version = "0.0.3"
+//
+//            afterEvaluate {
+//                from(components["release"])
+//            }
+//        }
+//    }
+//}
 
-            afterEvaluate {
-                from(components["release"])
+afterEvaluate {
+    publishing {
+        publications {
+            group = "com.github.lumyuan"
+            version = "0.0.1"
+            register<MavenPublication>("release") {
+                // Applies the component for the release build variant.
+                from(components.getByName("release"))
+                groupId = group.toString()
+                artifactId = "file-scope"
+                version = version
             }
         }
     }
