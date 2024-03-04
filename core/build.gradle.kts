@@ -59,7 +59,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.lumyuan"
             artifactId = "file-scope"
-            version = "0.0.2"
+            version = "0.0.1"
 
             afterEvaluate {
                 from(components["release"])

@@ -1,7 +1,6 @@
 package io.lumyuan.filescope.util;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.UriPermission;
@@ -38,7 +37,6 @@ public class FilePermissionUtil {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    @SuppressLint("WrongConstant")
     public static Intent buildAppSpecificDirectoryPermissionIntent(@NonNull String path) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION
@@ -49,7 +47,6 @@ public class FilePermissionUtil {
         return intent;
     }
 
-    @SuppressLint("WrongConstant")
     public static void requestAppSpecificDirectoryPermissionResultLauncher(@NonNull Activity activity, @NonNull ActivityResult result) {
         Intent data = result.getData();
         if (data != null && result.getResultCode() == Activity.RESULT_OK) {

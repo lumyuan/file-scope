@@ -10,7 +10,7 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
 import io.lumyuan.filescope.FileScope;
-import io.lumyuan.filescope.util.StringUtils;
+import io.lumyuan.filescope.util.StringUtil;
 
 public class ShellExecutor {
     private static String extraEnvPath = "";
@@ -36,7 +36,7 @@ public class ShellExecutor {
                     int length = inputStream.read(cache);
                     inputStream.close();
                     process.destroy();
-                    String path = StringUtils.trimSpace(new String(cache, 0, length));
+                    String path = StringUtil.trimSpace(new String(cache, 0, length));
                     if (!path.isEmpty()) {
                         defaultEnvPath =  path;
                     } else {

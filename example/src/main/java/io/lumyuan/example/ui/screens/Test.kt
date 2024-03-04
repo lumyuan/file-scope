@@ -42,7 +42,7 @@ import kotlinx.coroutines.launch
 fun Test() {
     val activity = LocalContext.current as ComponentActivity
 
-    // æ³¨å†Œæ–‡ä»¶æƒé™å›è°ƒå™¨
+    // ×¢²áÎÄ¼şÈ¨ÏŞ»Øµ÷Æ÷
     val permissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult()
     ) {
@@ -84,7 +84,7 @@ fun Test() {
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp),
                 label = {
-                    Text(text = "æµ‹è¯•æŒ‡ä»¤")
+                    Text(text = "²âÊÔÖ¸Áî")
                 },
 //                singleLine = true,
             )
@@ -99,7 +99,7 @@ fun Test() {
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
             ) {
-                Text(text = "è·å–Rootæƒé™")
+                Text(text = "»ñÈ¡RootÈ¨ÏŞ")
             }
             Spacer(modifier = Modifier.size(8.dp))
             Button(
@@ -107,14 +107,14 @@ fun Test() {
                     if (hasRoot) {
 
                     }else {
-                        Toast.makeText(activity, "æœªæ£€æµ‹åˆ°Rootæƒé™", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity, "Î´¼ì²âµ½RootÈ¨ÏŞ", Toast.LENGTH_SHORT).show()
                     }
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
             ) {
-                Text(text = "è¿è¡ŒæŒ‡ä»¤")
+                Text(text = "ÔËĞĞÖ¸Áî")
             }
             SelectionContainer {
                 Text(text = text, modifier = Modifier
